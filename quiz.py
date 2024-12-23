@@ -64,3 +64,26 @@ print("총 탑승 승객 수:{0}분.".format(cnt))
 #         업무=input("업무를 요약하시오.")
 #         보고서.write("이름:{0}\n부서:{1}\n업무 요약:{2}".format(이름, 부서, 업무))
 
+#quiz 8 아쉽게 못 품
+class house:
+    def __init__(self,location, house_type, deal_type, price, completion_year):
+        self.location=location
+        self.house_type= house_type
+        self.deal_type= deal_type
+        self.price=price
+        self.completion_year= completion_year
+    
+    def show_house(self):
+        print("{0} {1} {2} {3} {4} ".format(self.location,self.house_type,self.deal_type,self.price,self.completion_year))
+houses=[]
+매물1=house( "강남", "아파트", "매매", "10억", "2010년")
+매물2=house("마포", "오피스텔", "전세", "5억", "2007년")
+매물3=house("송파", "빌라", "월세", "500/50", "2000년")
+
+
+houses.append(매물1)
+houses.append(매물2)
+houses.append(매물3)
+print("매물은 총{0}채 있습니다.".format(len(houses))) #len은 글자수를 알려주는 것인데 리스트에선 리스트에 몇 개가 들어있는지를 알려준다.
+for i in houses:
+    i.show_house()
