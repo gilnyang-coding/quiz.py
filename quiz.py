@@ -89,34 +89,42 @@ for i in houses:
     i.show_house()
 
 #quiz 9 못 품품
-class SoldOutError(Exception):
-    pass
-chicken = 10
-waiting = 1
-while True:#반복문에서 try등을 실행한다. 그래야 반복돠겠지??
-    try:
-        print("[남은 치킨: {0}]".format(chicken))
-        order = input("치킨 몇 마리를 시키겠습니까? ")
-        order = int(order)
+# class SoldOutError(Exception):
+#     pass
+# chicken = 10
+# waiting = 1
+# while True:#반복문에서 try등을 실행한다. 그래야 반복돠겠지??
+#     try:
+#         print("[남은 치킨: {0}]".format(chicken))
+#         order = input("치킨 몇 마리를 시키겠습니까? ")
+#         order = int(order)
     
-        if order > chicken:
-            print("재고보다 많이 시킬 수 없습니다.")
-        elif order <= 0:
-            raise ValueError
-        else:
-            chicken -= order
-            waiting += 1       
-            if chicken==0:
-                print("주문이 완료되었습니다. [남은 치킨: {0}, 대기번호: {1}번] 재고가 모두 소진되었습니다.".format(chicken,waiting))
-                raise SoldOutError
-            elif chicken >= 0:
-                print("주문이 완료되었습니다. [남은 치킨: {0}, 대기번호: {1}번]".format(chicken, waiting))
+#         if order > chicken:
+#             print("재고보다 많이 시킬 수 없습니다.")
+#         elif order <= 0:
+#             raise ValueError
+#         else:
+#             chicken -= order
+#             waiting += 1       
+#             if chicken==0:
+#                 print("주문이 완료되었습니다. [남은 치킨: {0}, 대기번호: {1}번] 재고가 모두 소진되었습니다.".format(chicken,waiting))
+#                 raise SoldOutError
+#             elif chicken >= 0:
+#                 print("주문이 완료되었습니다. [남은 치킨: {0}, 대기번호: {1}번]".format(chicken, waiting))
                 
 
-    except ValueError:
-        print("잘못 입력하셨습니다.")
-    except SoldOutError as err:
-        print(err)
-        break
+    # except ValueError:
+    #     print("잘못 입력하셨습니다.")
+    # except SoldOutError as err:
+    #     print(err)
+    #     break
     
+# quiz 10
+import byme
+
+y="유튜브: https://youtube.com"
+e="이메일: kdw061224a@gmail.com"
+
+byme.sign(y,e)
+
 
